@@ -11,6 +11,8 @@
 ## 🔝 Features
 
 - [x] Login.
+- [x] Cadastro de usuário.
+- [x] Listagem de usuários.
 - [x] Gráfico de inscritos da semana.
 - [x] Gráfico de taxa de abertura.
 
