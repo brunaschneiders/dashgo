@@ -25,6 +25,8 @@ As seguintes tecnologias foram utilizadas na construção deste projeto:
 - [Typescript](https://www.typescriptlang.org/)
 - [Chakra UI](https://chakra-ui.com/)
 - [ApexChartsJS](https://apexcharts.com)
+- [React Hook Form](https://react-hook-form.com/)
+- [Yup](https://github.com/jquense/yup)
 
 ## 🚀 Como executar o projeto
 
