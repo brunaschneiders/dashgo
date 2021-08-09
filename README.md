@@ -2,7 +2,7 @@
 
 <h1 align="center">dashgo  👋</h1>
 
-<p align="center"><b>Status: Em construção  🚧</b></p>
+<p align="center"><b>Status: Concluído ✔ </b></p>
 
 ## 📄 Sobre
 
