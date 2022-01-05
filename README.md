@@ -8,14 +8,6 @@
 
 <p> 🚀 A aplicação consiste em um dashboard desenvolvido durante o módulo "Construindo interfaces do futuro"  do Ignite, bootcamp ministrado pela [Rocketseat](https://rocketseat.com.br/).</p>
 
-## 🔝 Features
-
-- [x] Login.
-- [x] Cadastro de usuário.
-- [x] Listagem de usuários.
-- [x] Gráfico de inscritos da semana.
-- [x] Gráfico de taxa de abertura.
-
 ## 🛠 Tecnologias
 
 As seguintes tecnologias foram utilizadas na construção deste projeto:
@@ -27,6 +19,29 @@ As seguintes tecnologias foram utilizadas na construção deste projeto:
 - [ApexChartsJS](https://apexcharts.com)
 - [React Hook Form](https://react-hook-form.com/)
 - [Yup](https://github.com/jquense/yup)
+- [MirageJS](https://miragejs.com/)
+- [React Query](https://react-query.tanstack.com/)
+
+## 🔝 Features
+
+- [x] Login.
+- [x] Cadastro de usuário.
+- [x] Listagem de usuários.
+- [x] Gráfico de inscritos da semana.
+- [x] Gráfico de taxa de abertura.
+- [x] Paginação.
+- [x] Salvamento de dados em cache com React Query.
+- [x] Prefetch de dados com React Query.
+- [x] Utilização de api simulada dentro do front-end com MirageJS.
+
+- Login: 
+![image](https://user-images.githubusercontent.com/64864277/148265902-e55ded58-deca-4f8b-acb9-1e3930f63182.png)
+
+- Dashboard:
+![image](https://user-images.githubusercontent.com/64864277/148265780-8949d5c7-4804-4432-ae05-b092df21f607.png)
+
+- Listagem de Usuários:
+![image](https://user-images.githubusercontent.com/64864277/148266085-0651f68f-c2fd-464a-9621-a2b167b81bbb.png)
 
 ## 🚀 Como executar o projeto
 
