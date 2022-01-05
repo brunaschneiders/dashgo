@@ -58,6 +58,8 @@ export function makeServer() {
         //3º parâmetro: registros
         return new Response(200, { "x-total-count": String(total) }, { users });
       });
+
+      this.get("/users/:id");
       this.post("/users");
 
       //reseta o namespace após ser utilizado pelo mirage para não conflitar

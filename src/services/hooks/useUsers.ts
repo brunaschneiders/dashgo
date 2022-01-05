@@ -41,6 +41,6 @@ export function useUsers(page: number) {
   //sempre que o valor dele é alterado, os dados serão buscados novamente no back-end.
   //e todos os já buscados ficam armazenados em cache.
   return useQuery(["users", page], () => getUsers(page), {
-    staleTime: 1000 * 5, //5 seconds
+    staleTime: 1000 * 60 * 10, //5 seconds
   });
 }
