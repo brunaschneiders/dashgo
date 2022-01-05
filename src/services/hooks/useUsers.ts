@@ -1,4 +1,4 @@
-import { useQuery } from "react-query";
+import { useQuery, UseQueryOptions, UseQueryResult } from "react-query";
 import { api } from "../api";
 
 type User = {
@@ -13,7 +13,7 @@ type GetUsersResponse = {
   users: User[];
 };
 
-async function getUsers(page: number): Promise<GetUsersResponse> {
+export async function getUsers(page: number): Promise<GetUsersResponse> {
   const { data, headers } = await api.get("users", {
     params: { page },
   });
@@ -36,11 +36,12 @@ async function getUsers(page: number): Promise<GetUsersResponse> {
   return { users, totalCount };
 }
 
-export function useUsers(page: number) {
+export function useUsers(page: number, options: UseQueryOptions) {
   //page é o parâmetro a ser observado a fim de verificar se é necessário buscar os dados
   //sempre que o valor dele é alterado, os dados serão buscados novamente no back-end.
   //e todos os já buscados ficam armazenados em cache.
   return useQuery(["users", page], () => getUsers(page), {
     staleTime: 1000 * 60 * 10, //5 seconds
+    ...options,
   });
 }

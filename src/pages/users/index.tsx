@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { useUsers } from "../../services/hooks/useUsers";
+import { useUsers, getUsers } from "../../services/hooks/useUsers";
 import { queryClient } from "../../services/queryClient";
+import { GetServerSideProps } from "next";
 
 import {
   Box,
@@ -27,12 +28,25 @@ import { Pagination } from "../../components/Pagination";
 import { Sidebar } from "../../components/Sidebar";
 import { api } from "../../services/api";
 
-export default function UserList() {
+type User = {
+  id: string;
+  name: string;
+  email: string;
+  createdAt: string;
+};
+
+interface UserListProps {
+  users: User[];
+}
+
+export default function UserList({ users }: UserListProps) {
   const [page, setPage] = useState(1);
   //1º parâmetro: chave que será usada para armazenar em cache
   //2º parâmetro: busca de dados (função)
   //3º parâmetro: options
-  const { data, isLoading, isFetching, error } = useUsers(page);
+  const { data, isLoading, isFetching, error } = useUsers(page, {
+    initialData: users,
+  });
 
   const isWideVersion = useBreakpointValue({ base: false, lg: true });
 
@@ -141,3 +155,11 @@ export default function UserList() {
     </Box>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  const { users, totalCount } = await getUsers(1);
+
+  return {
+    props: { users, totalCount },
+  };
+};
